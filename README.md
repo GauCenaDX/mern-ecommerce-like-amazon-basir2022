@@ -22,3 +22,15 @@ https://www.youtube.com/watch?v=CDtPMR5y0QU
 ### Setting up whitelist for the localhost
 
 ### Notes:
+
+
+## Lessons:
+1.
+2.
+3.
+4.
+5. List Products
+  1. Create product array
+  2. Add product images
+  3. Render products
+  4. Style products
