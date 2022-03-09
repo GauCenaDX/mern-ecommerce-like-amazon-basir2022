@@ -38,3 +38,16 @@ https://www.youtube.com/watch?v=CDtPMR5y0QU
   1. npm i react-router-dom
   2. create route for home screen
   3. create router for product screen
+7. Create Node.JS Server
+  1. Run npm init in backend's root folder
+  2. Update package.json set type: module to use 'import module' in ES6 instead of 'require'
+  3. Create Server.js
+  4. 'npm install express' for web server
+  5. Imports express from 'express'
+  6. Move data.js from frontend to backend
+  7. Create route for /api/products. This return products' data to the frontend
+  8. Optional: install JSON Viewer (tulios) for Chrome browser.
+  9. npm install nodemon --save-dev
+  10. Add "start": "nodemon server.js"
+  11. Run npm start
+  
