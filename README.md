@@ -60,7 +60,7 @@ https://www.youtube.com/watch?v=CDtPMR5y0QU
 10. Add "start": "nodemon server.js"
 11. Run npm start
 
-### 8. Fetch products from backend
+### 8. Fetch Products from Backend
 
 Get access to the backend API from the HomeScreen component, and use Axios to fetch data from backend.
 
@@ -69,4 +69,17 @@ Get access to the backend API from the HomeScreen component, and use Axios to fe
 2. 'npm install axios' in frontend -> to fetch data from backend
 3. Use state hook
 4. Use effect hook
-5. Use reducer hook
+
+### 9. Manage State by Reducer Hooks
+
+Replace useState with useReducer to manage complex state in HomeScreen component.
+
+Manage State by Reducer Hook:
+
+  1. Define reducer
+  2. Update fetch data
+  3. Get state from useReducer
+  4. Install use-reducer-logger in frontend to keep track of states
+      > npm install use-reducer-logger --force
+  5. Show loading box | error message | products
+
