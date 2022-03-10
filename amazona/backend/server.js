@@ -9,6 +9,16 @@ app.get('/api/products', (req, res) => {
   res.send(data.products);
 });
 
+//-- Send product info (based on slug info) to frontend when access this url
+app.get('/api/products/slug/:slug', (req, res) => {
+  const product = data.products.find((x) => x.slug === req.params.slug);
+  if (product) {
+    res.send(product);
+  } else {
+    res.status(404).send({ message: 'Product Not Found' });
+  }
+});
+
 //-- Define the port that response for backend
 const port = process.env.PORT || 3001;
 app.listen(port, () => {

@@ -21,7 +21,7 @@ const data = {
       category: 'Toys',
       image: '/images/darth-maul.jpg',
       price: 119.98,
-      countInStock: 15,
+      countInStock: 0,
       brand: 'Disney',
       rating: 4.5,
       numReviews: 14,

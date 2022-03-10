@@ -9,6 +9,9 @@ End: TBU
 This is a code along session from a YouTube tutorial by Coding with Basir:
 https://www.youtube.com/watch?v=CDtPMR5y0QU  
 
+Git Repository:
+https://github.com/basir/mern-amazona/blob/master/backend/data.js
+
 ## Backend:
 
 ### Packages:
@@ -97,8 +100,15 @@ Manage State by Reducer Hook:
 
 ### 11. Create Product and Rating Component
 
-1. Change product list to bootstrap style
-2. Create Product component
-3. Create Rating component
-4. Import font awesome in index.html
+1. Create Product component
+    - Change product list from simple <div> to bootstrap <Card>
+2. Create Rating component
+3. Import font awesome in index.html
     > https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css
+
+### 12. Create Product Details Screen
+
+1. Fetch product from backend
+    - Create new backend API to get product info based on slug
+2. Create 3 columns for product image, info and action
+3. 'npm install react-helmet-async' to change website metadata such as title
