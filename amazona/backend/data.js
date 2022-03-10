@@ -12,7 +12,7 @@ const data = {
       countInStock: 10,
       brand: 'Max Factory',
       rating: 4.5,
-      numReview: 10,
+      numReviews: 10,
       description: 'high quality action figure'
     },
     {
@@ -24,7 +24,7 @@ const data = {
       countInStock: 15,
       brand: 'Disney',
       rating: 4.5,
-      numReview: 14,
+      numReviews: 14,
       description: 'high quality action figure'
     },
     {
@@ -36,7 +36,7 @@ const data = {
       countInStock: 20,
       brand: 'Movie Posters USA',
       rating: 4.0,
-      numReview: 10,
+      numReviews: 10,
       description: 'high quality poster'
     },
     {
@@ -48,7 +48,7 @@ const data = {
       countInStock: 5,
       brand: 'Movie Posters USA',
       rating: 4.5,
-      numReview: 10,
+      numReviews: 10,
       description: 'high quality action figure'
     }
   ]

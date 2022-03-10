@@ -94,3 +94,11 @@ Manage State by Reducer Hook:
     4. Put main contents in bootstrap Container
 4. Add footer
 5. Apply bootstrap css classes: text-center, d-flex, flex-column
+
+### 11. Create Product and Rating Component
+
+1. Change product list to bootstrap style
+2. Create Product component
+3. Create Rating component
+4. Import font awesome in index.html
+    > https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css
