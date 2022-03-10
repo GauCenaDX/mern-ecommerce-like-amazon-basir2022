@@ -83,3 +83,14 @@ Manage State by Reducer Hook:
       > npm install use-reducer-logger --force
   5. Show loading box | error message | products
 
+### 10. Add bootstrap UI Framework
+
+1. 'npm install react-bootstrap bootstrap' in frontend
+2. 'npm install react-router-bootstrap' in frontend for LinkContainer
+3. Update App.js (using Layout and Components from react-bootstrap)
+    1. Change to Navbar in header using bootstrap Container
+    2. Remove css for header in index.css
+    3. Import bootstrap css in index.js
+    4. Put main contents in bootstrap Container
+4. Add footer
+5. Apply bootstrap css classes: text-center, d-flex, flex-column

@@ -7,9 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-header {
+/* 1rem = 16px */
+/* header {
   background-color: #404040;
-  /* 1rem = 16px */
   padding: 1rem;
 }
 
@@ -17,10 +17,16 @@ header a {
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
+} */
+
+.site-container {
+  min-height: 100vh;
 }
 
 main {
-  padding: 1rem;
+  /* padding: 1rem; */
+  /* -- Set flex to 1 to occupy all space b/w header and footer */
+  flex: 1;
 }
 
 .products {
