@@ -119,3 +119,11 @@ Manage State by Reducer Hook:
 2. Create MessageBox component using Alert component from bootstrap
 3. Create utils.js to define getError function
 4. Use LoadingBox and MessageBox in HomeScreen and ProductScreen
+
+### 14. Implement Add to Cart
+
+1. Create React Context
+    1. Create Store.js
+2. Define reducer
+3. Create store provider
+4. Implement add to cart button click handler
