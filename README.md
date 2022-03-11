@@ -112,3 +112,10 @@ Manage State by Reducer Hook:
     - Create new backend API to get product info based on slug
 2. Create 3 columns for product image, info and action
 3. 'npm install react-helmet-async' to change website metadata such as title
+
+### 13. Create Loading and Message Component
+
+1. Create LoadingBox component using Spinner component from bootstrap
+2. Create MessageBox component using Alert component from bootstrap
+3. Create utils.js to define getError function
+4. Use LoadingBox and MessageBox in HomeScreen and ProductScreen
