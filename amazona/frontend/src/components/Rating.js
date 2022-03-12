@@ -63,6 +63,6 @@ function Rating(props) {
   );
 }
 
-//-- Shorthand: fas = font awesome star, far = font awesome regular
+//-- Shorthand: fas = font awesome solid, far = font awesome regular
 
 export default Rating;

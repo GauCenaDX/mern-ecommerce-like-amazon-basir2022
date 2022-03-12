@@ -127,3 +127,15 @@ Manage State by Reducer Hook:
 2. Define reducer
 3. Create store provider
 4. Implement add to cart button click handler
+
+### 15. Complete Add to Cart Functionality
+
+Now, when we add the same item into cart, the item won't be added as a duplicated item, instead the quantity of the exist item in cart will increase.
+
+1. Add unique id for each product in data.js
+2. Check cart's current items before add the item into cart
+    1. Check exist item in the cart
+    2. Check count in stock in backend
+3. Use reduce() to calculate item quantity
+    > // a = accumulator, c = current item, 0 = accumulator default value
+    > reduce((a, c) => a + c.quantity, 0)
