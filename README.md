@@ -34,6 +34,7 @@ https://github.com/basir/mern-amazona/blob/master/backend/data.js
 ### 2. Tools
 
 ### 3. Create React app
+
 ### 4. Push to GitHub
 
 ### 5. List Products
@@ -139,3 +140,15 @@ Now, when we add the same item into cart, the item won't be added as a duplicate
 3. Use reduce() to calculate item quantity
     > // a = accumulator, c = current item, 0 = accumulator default value
     > reduce((a, c) => a + c.quantity, 0)
+
+### 16. Create Cart Screen
+
+![Cart Screen Image](images/cart-screen-img-v1.JPG)
+
+1. Create CartScreen.js
+2. Create 2 columns:
+    - Display items list
+    - Create action column
+3. Create a route to Cart Screen in App.js
+4. Update addToCartHandler() in ProductScreen.js to redirect user to Cart Screen
+    - Use useNavigate from react-router-dom
