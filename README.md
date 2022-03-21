@@ -123,7 +123,7 @@ Manage State by Reducer Hook:
 
 ### 14. Implement Add to Cart
 
-1. Create React Context
+1. Create React Context to store cart items in global state
     1. Create Store.js
 2. Define reducer
 3. Create store provider
@@ -138,12 +138,12 @@ Now, when we add the same item into cart, the item won't be added as a duplicate
     1. Check exist item in the cart
     2. Check count in stock in backend
 3. Use reduce() to calculate item quantity
-    > // a = accumulator, c = current item, 0 = accumulator default value
+    > // a = accumulator, c = current item, 0 = accumulator default value  
     > reduce((a, c) => a + c.quantity, 0)
 
 ### 16. Create Cart Screen
 
-![Cart Screen Image](images/cart-screen-img-v1.JPG)
+<img src="images/cart-screen-img-v1.jpg" alt="cart-screen-image" width="600"/>
 
 1. Create CartScreen.js
 2. Create 2 columns:
@@ -152,3 +152,12 @@ Now, when we add the same item into cart, the item won't be added as a duplicate
 3. Create a route to Cart Screen in App.js
 4. Update addToCartHandler() in ProductScreen.js to redirect user to Cart Screen
     - Use useNavigate from react-router-dom
+
+### 17. Complete Cart Screen
+
+1. Click handler for inc/dec item
+2. Click handler for remove item
+3. Save cart Item in local storage
+4. Click handler for checkout
+5. Activate 'add to cart' button on Home Screen
+6. On Home Screen, if product is out of stock, change 'add to cart' button to 'out of stock'
