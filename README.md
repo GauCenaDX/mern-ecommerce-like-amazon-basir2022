@@ -161,3 +161,9 @@ Now, when we add the same item into cart, the item won't be added as a duplicate
 4. Click handler for checkout
 5. Activate 'add to cart' button on Home Screen
 6. On Home Screen, if product is out of stock, change 'add to cart' button to 'out of stock'
+
+### 18. Create Sign in Screen
+
+1. Create sign in form
+2. Add email and password
+3. add sign in button
