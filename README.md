@@ -167,3 +167,27 @@ Now, when we add the same item into cart, the item won't be added as a duplicate
 1. Create sign in form
 2. Add email and password
 3. add sign in button
+
+<img src="images/signin-screen" alt="signin-screen-image" width="600"/>
+
+### 19. Connect to MongoDB Database
+
+1. create atlas MongoDB database (option 1)
+    - amazona - theAMAzona.21
+    - My Local Environment
+    - IP Address: 0.0.0.0/0 -> access from anywhere
+    - Browse Collections -> Add My Own Data
+    - DB name: amazona, Collection name: test-collection -> Create
+    - Create connection URI: Database -> Connect -> Connect your application
+    -     -> Driver: Node.js, Version: 4.0 or later -> Copy the connection string
+    - Create .env in /backend -> Add connection string here
+    - Add .env to .gitignore
+2. install local MongoDB database (option 2)
+    - Install MongoDB locally
+    - Install MongoDB Compass (GUI for MongoDB database)
+    - Connectiong string: mongodb://localhost
+    - Create the database
+    - .env: MONGODB_URI=mongodb://localhost/amazona
+3. 'npm install mongoose' in /backend to connect to mondodb database
+4. 'npm install dotenv' in /backend to load .env file
+5. connect to mongodb database
