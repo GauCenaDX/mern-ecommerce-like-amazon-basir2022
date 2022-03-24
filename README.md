@@ -205,3 +205,37 @@ Now, when we add the same item into cart, the item won't be added as a duplicate
 3. Add user samples in data.js
 4. 'npm i bcryptjs' in /backend to encrype password
 5. Check users data at localhost:3001/api/seed
+
+### 24. Implement Signin Backend API
+
+http://localhost:3001/api/users/signin
+
+When user send their login information from the frontend, we will do the authentication in the backend and send back a token for authorization.
+
+1. Create user route
+    - 'npm install express-async-handler' in /backend
+    - Define error handler in server.js
+2. Create signin api
+3. 'npm install jsonwebtoken' in /backend to generate token
+4. Define generateToken
+    - Create utils.js in /backend
+5. Use userRouter in server.js
+6. Install Google Chrome's Advanced REST client to test authorization
+    - Access the app here chrome://apps/ -> ARC
+    - HTTP request:
+      > Method: POST
+      > Request URL: http://localhost:3001/api/users/signin
+      > Body -> Body content type: application/json
+      > {
+      >   "email":"admin@example.com",
+      >   "password":"123456"
+      > }
+    - SEND -> expect output:
+      > {
+      >   "_id": "623c140961f67d45d003b71b",
+      >   "name": "admin",
+      >   "email": "admin@example.com",
+      >   "isAdmin": true,
+      >   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjNjMTQM2I3MWIiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tI6dHJ1ZSwiaWF0IjoxNjQ4MTA5MTE3LCJleHAiOjE2NTA3MDExMTd9.w8BDCWqxTHo_GfzdUQK-G0CJodDvs8A59rQVo"
+      > }
+
