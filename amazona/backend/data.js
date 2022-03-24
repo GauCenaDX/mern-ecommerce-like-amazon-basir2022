@@ -1,9 +1,25 @@
+import bcrypt from 'bcryptjs';
+
 //- Notes:
 //-   . slug is shown on the url so it needs to be web friendly
 //-   . _id is set with an underscore at the beginning to make it compatible
 //-     with MongoDB database
 
 const data = {
+  users: [
+    {
+      name: 'admin',
+      email: 'admin@example.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: true
+    },
+    {
+      name: 'john',
+      email: 'john@example.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: false
+    }
+  ],
   products: [
     {
       // _id: '1',

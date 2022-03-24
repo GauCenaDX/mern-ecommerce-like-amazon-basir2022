@@ -197,3 +197,11 @@ Now, when we add the same item into cart, the item won't be added as a duplicate
 2. Create Seed route: localhost:3001/api/seed to generate sample data
 3. Create Product route:  to keep all apis related to product
 4. Use Route in server.js
+
+### 21. Seed Sample Users
+
+1. Create User model to add user info to database
+2. Seed user samples to localhost:3001/api/seed
+3. Add user samples in data.js
+4. 'npm i bcryptjs' in /backend to encrype password
+5. Check users data at localhost:3001/api/seed
