@@ -178,8 +178,7 @@ Now, when we add the same item into cart, the item won't be added as a duplicate
     - IP Address: 0.0.0.0/0 -> access from anywhere
     - Browse Collections -> Add My Own Data
     - DB name: amazona, Collection name: test-collection -> Create
-    - Create connection URI: Database -> Connect -> Connect your application
-    -     -> Driver: Node.js, Version: 4.0 or later -> Copy the connection string
+    - Create connection URI: Database -> Connect -> Connect your application -> Driver: Node.js, Version: 4.0 or later -> Copy the connection string
     - Create .env in /backend -> Add connection string here
     - Add .env to .gitignore
 2. install local MongoDB database (option 2)
@@ -191,3 +190,10 @@ Now, when we add the same item into cart, the item won't be added as a duplicate
 3. 'npm install mongoose' in /backend to connect to mondodb database
 4. 'npm install dotenv' in /backend to load .env file
 5. connect to mongodb database
+
+### 20. Generate Sample Products (Seed Sample Data)
+
+1. Create Product model
+2. Create Seed route: localhost:3001/api/seed to generate sample data
+3. Create Product route:  to keep all apis related to product
+4. Use Route in server.js

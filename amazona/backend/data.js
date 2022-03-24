@@ -6,7 +6,7 @@
 const data = {
   products: [
     {
-      _id: '1',
+      // _id: '1',
       name: 'Berserk Guts Black Swordsman Action Figure',
       slug: 'berserk-guts-black-swordsman-action-figure',
       category: 'Toys',
@@ -19,7 +19,7 @@ const data = {
       description: 'high quality action figure'
     },
     {
-      _id: '2',
+      // _id: '2',
       name: 'Play Arts Darth Maul Action Figure',
       slug: 'play-arts-darth-maul-action-figure',
       category: 'Toys',
@@ -32,7 +32,7 @@ const data = {
       description: 'high quality action figure'
     },
     {
-      _id: '3',
+      // _id: '3',
       name: 'One Piece - Manga TV Show Poster',
       slug: 'one-piece-manga-tv-show-poster',
       category: 'Posters',
@@ -45,7 +45,7 @@ const data = {
       description: 'high quality poster'
     },
     {
-      _id: '4',
+      // _id: '4',
       name: 'Naruto Shippuden - Anime Poster',
       slug: 'naruto-shippuden-anime-poster',
       category: 'Posters',
