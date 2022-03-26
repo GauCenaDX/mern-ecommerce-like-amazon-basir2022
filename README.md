@@ -139,7 +139,8 @@ Now, when we add the same item into cart, the item won't be added as a duplicate
     2. Check count in stock in backend
 3. Use reduce() to calculate item quantity
 
-    > // a = accumulator, c = current item, 0 = accumulator default value  
+    > // a = accumulator, c = current item, 0 = accumulator default value
+    >
     > reduce((a, c) => a + c.quantity, 0)
 
 ### 16. Create Cart Screen
@@ -261,3 +262,8 @@ When user send their login information from the frontend, we will do the authent
     - 'npm i react-toastify' in /frontend
 9. Replace static error message with error message from backend
 
+### 24. Create Shipping Screen
+
+1. Create form inputs
+2. Handle save shipping address
+3. Add checkout wizard bar
