@@ -138,6 +138,7 @@ Now, when we add the same item into cart, the item won't be added as a duplicate
     1. Check exist item in the cart
     2. Check count in stock in backend
 3. Use reduce() to calculate item quantity
+
     > // a = accumulator, c = current item, 0 = accumulator default value  
     > reduce((a, c) => a + c.quantity, 0)
 
@@ -206,7 +207,7 @@ Now, when we add the same item into cart, the item won't be added as a duplicate
 4. 'npm i bcryptjs' in /backend to encrype password
 5. Check users data at localhost:3001/api/seed
 
-### 24. Implement Signin Backend API
+### 22. Implement Signin Backend API
 
 http://localhost:3001/api/users/signin
 
@@ -223,6 +224,7 @@ When user send their login information from the frontend, we will do the authent
 6. Install Google Chrome's Advanced REST client to test authorization
     - Access the app here chrome://apps/ -> ARC
     - HTTP request:
+
       > Method: POST
       > Request URL: http://localhost:3001/api/users/signin
       > Body -> Body content type: application/json
@@ -230,7 +232,9 @@ When user send their login information from the frontend, we will do the authent
       >   "email":"admin@example.com",
       >   "password":"123456"
       > }
+
     - SEND -> expect output:
+
       > {
       >   "_id": "623c140961f67d45d003b71b",
       >   "name": "admin",
@@ -238,4 +242,22 @@ When user send their login information from the frontend, we will do the authent
       >   "isAdmin": true,
       >   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjNjMTQM2I3MWIiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tI6dHJ1ZSwiaWF0IjoxNjQ4MTA5MTE3LCJleHAiOjE2NTA3MDExMTd9.w8BDCWqxTHo_GfzdUQK-G0CJodDvs8A59rQVo"
       > }
+
+### 23. Complete Signin Screen
+
+1. Handle submit action
+    - Create submitHandler function for Signin Form
+    - Create 'email' and 'password' states
+2. Save token in store and local storage
+3. Redirect user to 'redirect' URL
+4. Show user name in header
+    - Get userInfo from Store's state in App.js
+5. Add links to User Profile and Order History
+6. Add Sign Out option
+    - Remove userInfo in Store
+    - Remove userInfo in local storage
+7. Prevent logged in user from seeing the signin page by using navigate
+8. Change alert style
+    - 'npm i react-toastify' in /frontend
+9. Replace static error message with error message from backend
 
