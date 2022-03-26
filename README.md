@@ -139,8 +139,7 @@ Now, when we add the same item into cart, the item won't be added as a duplicate
     2. Check count in stock in backend
 3. Use reduce() to calculate item quantity
 
-    > // a = accumulator, c = current item, 0 = accumulator default value
-    >
+    > // a = accumulator, c = current item, 0 = accumulator default value <br />
     > reduce((a, c) => a + c.quantity, 0)
 
 ### 16. Create Cart Screen
@@ -267,3 +266,10 @@ When user send their login information from the frontend, we will do the authent
 1. Create form inputs
 2. Handle save shipping address
 3. Add checkout wizard bar
+
+### 25. Create Sign Up Screen
+
+1. Create input forms
+2. Handle Submit
+3. Create new backend api for signup in userRoutes.js
+4. Add new signup route in App.js
