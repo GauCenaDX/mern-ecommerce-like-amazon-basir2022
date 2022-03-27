@@ -1,4 +1,5 @@
-import React, { useContext, useEffect } from 'react';
+import Axios from 'axios';
+import React, { useContext, useEffect, useReducer } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link, useNavigate } from 'react-router-dom';
 import Row from 'react-bootstrap/Row';
@@ -6,11 +7,35 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
+import { toast } from 'react-toastify';
+import { getError } from '../utils';
 import { Store } from '../Store';
 import CheckoutSteps from '../components/CheckoutSteps';
+import LoadingBox from '../components/LoadingBox';
+
+//-- Since Reducer is independent from Component, we define Reducer Function outside
+//-- of the Component Function
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'CREATE_REQUEST':
+      return { ...state, loading: true };
+    case 'CREATE_SUCCESS':
+      return { ...state, loading: false };
+    case 'CREATE_FAIL':
+      return { ...state, loading: false };
+    default:
+      return state;
+  }
+}
+
 
 export default function PlaceOrderScreen () {
   const navigate = useNavigate();
+
+  const [{ loading }, dispatch] = useReducer(reducer, {
+    loading: false
+  });
+
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart, userInfo } = state;
 
@@ -35,7 +60,37 @@ export default function PlaceOrderScreen () {
   console.log(cart);
 
   const placeOrderHandler = async () => {
-  
+    try {
+      dispatch({ type: 'CREATE_REQUEST' });
+
+      const { data } = await Axios.post(
+        '/api/orders',
+        {
+          orderItems: cart.cartItems,
+          shippingAddress: cart.shippingAddress,
+          paymentMethod: cart.paymentMethod,
+          itemsPrice: cart.itemsPrice,
+          shippingPrice: cart.shippingPrice,
+          taxPrice: cart.taxPrice,
+          totalPrice: cart.totalPrice
+        },
+        {
+          headers: {
+            authorization: `Bearer ${userInfo.token}`
+          }
+        }
+      );
+      ctxDispatch({ type: 'CART_CLEAR' });
+      dispatch({  type: 'CREATE_SUCCESS'});
+      localStorage.removeItem('cartItems');
+      //-- navigate user to the detailed order page
+      navigate(`/order/${data.order._id}`);
+
+    } catch (err) {
+      dispatch({ type: 'CREATE_FAIL' });
+      toast.error(getError(err));
+      console.log(getError(err));
+    }
   };
 
   useEffect(() => {
@@ -139,6 +194,7 @@ export default function PlaceOrderScreen () {
                       Place Order
                     </Button>
                   </div>
+                  {loading && <LoadingBox></LoadingBox>}
                 </ListGroup.Item>
               </ListGroup>
             </Card.Body>

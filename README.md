@@ -290,3 +290,12 @@ When user send their login information from the frontend, we will do the authent
 2. Add new route to /placeorder in App.js
 3. Show Preview Order (Shipping info, Payment method, Items list)
 4. Calculate prices and show Order Summary
+
+### 28. Implement Place Order Action
+
+1. Handle Place Order action
+2. Create Order Model
+3. Create Order api
+    - Create Order Route
+    - Create isAuth middleware in /backend/utils.js
+4. Use Order api in server.js

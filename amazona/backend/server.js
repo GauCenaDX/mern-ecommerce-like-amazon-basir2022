@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import seedRouter from './routes/seedRoutes.js';
 import productRouter from './routes/productRoutes.js';
 import userRouter from './routes/userRoutes.js';
+import orderRouter from './routes/orderRoutes.js';
 
 
 //-- Fetch variable from .env
@@ -34,6 +35,8 @@ app.use('/api/products', productRouter);
 
 //-- Send user info and token to frontend when access this url
 app.use('/api/users', userRouter);
+
+app.use('/api/orders', orderRouter);
 
 //-- Define the error hanlder
 //--   . This is like a middleware
