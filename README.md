@@ -144,7 +144,7 @@ Now, when we add the same item into cart, the item won't be added as a duplicate
 
 ### 16. Create Cart Screen
 
-<img src="images/cart-screen-img-v1.jpg" alt="cart-screen-image" width="600"/>
+<img src="./images/cart-screen-img-v1.jpg" alt="cart-screen-image" width="600"/>
 
 1. Create CartScreen.js
 2. Create 2 columns:
@@ -169,7 +169,7 @@ Now, when we add the same item into cart, the item won't be added as a duplicate
 2. Add email and password
 3. add sign in button
 
-<img src="images/signin-screen" alt="signin-screen-image" width="600"/>
+<img src="./images/signin-screen.jpg" alt="signin-screen-image" width="600"/>
 
 ### 19. Connect to MongoDB Database
 
@@ -225,22 +225,22 @@ When user send their login information from the frontend, we will do the authent
     - Access the app here chrome://apps/ -> ARC
     - HTTP request:
 
-      > Method: POST
-      > Request URL: http://localhost:3001/api/users/signin
-      > Body -> Body content type: application/json
-      > {
-      >   "email":"admin@example.com",
-      >   "password":"123456"
+      > Method: POST <br />
+      > Request URL: http://localhost:3001/api/users/signin <br />
+      > Body -> Body content type: application/json <br />
+      > { <br />
+      >   "email":"admin@example.com", <br />
+      >   "password":"123456" <br />
       > }
 
     - SEND -> expect output:
 
-      > {
-      >   "_id": "623c140961f67d45d003b71b",
-      >   "name": "admin",
-      >   "email": "admin@example.com",
-      >   "isAdmin": true,
-      >   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjNjMTQM2I3MWIiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tI6dHJ1ZSwiaWF0IjoxNjQ4MTA5MTE3LCJleHAiOjE2NTA3MDExMTd9.w8BDCWqxTHo_GfzdUQK-G0CJodDvs8A59rQVo"
+      > { <br />
+      >   "_id": "623c140961f67d45d003b71b", <br />
+      >   "name": "admin", <br />
+      >   "email": "admin@example.com", <br />
+      >   "isAdmin": true, <br />
+      >   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjNjMTQM2I3MWIiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tI6dHJ1ZSwiaWF0IjoxNjQ4MTA5MTE3LCJleHAiOjE2NTA3MDExMTd9.w8BDCWqxTHo_GfzdUQK-G0CJodDvs8A59rQVo" <br />
       > }
 
 ### 23. Complete Signin Screen
@@ -273,3 +273,13 @@ When user send their login information from the frontend, we will do the authent
 2. Handle Submit
 3. Create new backend api for signup in userRoutes.js
 4. Add new signup route in App.js
+
+### 26. Implement Select Payment Method Screen
+
+1. Create input forms
+2. Handle submit
+    - Create submit handler function
+    - Add SAVE_PAYMENT_METHOD case to Store
+    - Add new payment route in App.js
+    - Update signoutHandler to remove paymentMethod value from local storage in App.js
+    - Update USER_SIGNOUT case in Store.js
