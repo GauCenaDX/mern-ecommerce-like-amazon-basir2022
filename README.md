@@ -283,3 +283,10 @@ When user send their login information from the frontend, we will do the authent
     - Add new payment route in App.js
     - Update signoutHandler to remove paymentMethod value from local storage in App.js
     - Update USER_SIGNOUT case in Store.js
+
+### 27. Create Place Order Screen
+
+1. Create Place Order Screen
+2. Add new route to /placeorder in App.js
+3. Show Preview Order (Shipping info, Payment method, Items list)
+4. Calculate prices and show Order Summary
