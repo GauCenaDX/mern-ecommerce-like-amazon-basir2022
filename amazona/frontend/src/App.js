@@ -7,6 +7,7 @@ import SignupScreen from './screens/SignupScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import OrderScreen from './screens/OrderScreen';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropDown from 'react-bootstrap/NavDropDown';
@@ -84,6 +85,7 @@ function App() {
               <Route path='/shipping' element={<ShippingAddressScreen />} />
               <Route path='/payment' element={<PaymentMethodScreen />} />
               <Route path='/placeorder' element={<PlaceOrderScreen />} />
+              <Route path='order/:id' element={<OrderScreen />} />
               <Route path='/' element={<HomeScreen />} />
             </Routes>
           </Container>

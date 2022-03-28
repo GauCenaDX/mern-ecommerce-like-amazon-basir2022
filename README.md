@@ -144,7 +144,7 @@ Now, when we add the same item into cart, the item won't be added as a duplicate
 
 ### 16. Create Cart Screen
 
-<img src="./images/cart-screen-img-v1.jpg" alt="cart-screen-image" width="600"/>
+<img src="./images/cart-screen-img-v1.jpg" alt="cart-screen-image" width="600" />
 
 1. Create CartScreen.js
 2. Create 2 columns:
@@ -169,7 +169,7 @@ Now, when we add the same item into cart, the item won't be added as a duplicate
 2. Add email and password
 3. add sign in button
 
-<img src="./images/signin-screen.jpg" alt="signin-screen-image" width="600"/>
+<img src="./images/signin-screen.jpg" alt="signin-screen-image" width="600" />
 
 ### 19. Connect to MongoDB Database
 
@@ -229,18 +229,18 @@ When user send their login information from the frontend, we will do the authent
       > Request URL: http://localhost:3001/api/users/signin <br />
       > Body -> Body content type: application/json <br />
       > { <br />
-      >   "email":"admin@example.com", <br />
-      >   "password":"123456" <br />
+      >     "email":"admin@example.com", <br />
+      >     "password":"123456" <br />
       > }
 
     - SEND -> expect output:
 
       > { <br />
-      >   "_id": "623c140961f67d45d003b71b", <br />
-      >   "name": "admin", <br />
-      >   "email": "admin@example.com", <br />
-      >   "isAdmin": true, <br />
-      >   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjNjMTQM2I3MWIiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tI6dHJ1ZSwiaWF0IjoxNjQ4MTA5MTE3LCJleHAiOjE2NTA3MDExMTd9.w8BDCWqxTHo_GfzdUQK-G0CJodDvs8A59rQVo" <br />
+      >     "_id": "623c140961f67d45d003b71b", <br />
+      >     "name": "admin", <br />
+      >     "email": "admin@example.com", <br />
+      >     "isAdmin": true, <br />
+      >     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjNjMTQM2I3MWIiLCJuYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tI6dHJ1ZSwiaWF0IjoxNjQ4MTA5MTE3LCJleHAiOjE2NTA3MDExMTd9.w8BDCWqxTHo_GfzdUQK-G0CJodDvs8A59rQVo" <br />
       > }
 
 ### 23. Complete Signin Screen
@@ -299,3 +299,12 @@ When user send their login information from the frontend, we will do the authent
     - Create Order Route
     - Create isAuth middleware in /backend/utils.js
 4. Use Order api in server.js
+
+### 29. Create Order Screen
+
+1. Create OrderScreen.js in frontend
+2. Create backend api for order/:id
+    - Create a route for Order Screen in App.js
+3. Fetch order api in frontend
+4. Show order information in 2 columns
+5. Get order from backend using order id
